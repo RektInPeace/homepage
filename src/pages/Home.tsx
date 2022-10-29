@@ -9,9 +9,9 @@ const Home= () => {
         <h1>
             Rekt in Peace
         </h1>
-        <Button onClick={event =>  window.location.href='/mint'}>
+        {/* <Button onClick={event =>  window.location.href='/mint'}>
             Mint
-        </Button>
+        </Button> */}
     </div>
     )
 }
