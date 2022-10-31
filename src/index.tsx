@@ -18,3 +18,13 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+/*
+
+   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <link href="assets/styles/styles.css" rel="stylesheet" type="text/css">
+   <link href="assets/styles/custom-responsive-styles.css" rel="stylesheet" type="text/css">
+
+
+*/
