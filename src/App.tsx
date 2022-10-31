@@ -5,17 +5,16 @@ import Home from './pages/Home'
 
 function App() {
   return (
-    <Landing/>
-  //   <HashRouter>
-  //     <Routes>
-  //       <Route path="/" element={
-  //         <Home></Home>
-  //       } />
-  //       <Route path="/leaderboard" element={
-  //         <h1>LeaderBoard</h1>
-  //       } />
-  //     </Routes>
-  // </HashRouter>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={
+          <Landing/>
+        } />
+        <Route path="/leaderboard" element={
+          <h1>LeaderBoard</h1>
+        } />
+      </Routes>
+  </HashRouter>
   )
 }
 
