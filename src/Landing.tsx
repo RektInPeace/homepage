@@ -5,8 +5,7 @@ import no_audio from '../public/no_audio.png'
 import './fonts/Bloody-Terror.ttf'
 import './fonts/Melted-Monster.ttf'
 import {Section, Leaderboard} from './components'
-
-
+import Table from 'react-bootstrap/Table';
 
 
 export const Landing = () => {
@@ -34,14 +33,14 @@ export const Landing = () => {
     const url: string = "https://storage.googleapis.com/rektinpeace.com/video.mp4"
     return (
       <div className="bg-image">
-        <video className='video-player' controlsList='nodownload' autoPlay={true} muted={muted} loop width="100%" height="100%">
+        <video className='video-player' controls autoPlay={true} muted={muted} loop width="100%" height="100%">
           <source src={url} type="video/mp4" />
           <img src='/logo_white.png'></img>
         </video>      
         <div >
-            <button className='mute-button' onClick={handleToggleMute} >
+            {/* <button className='mute-button' onClick={handleToggleMute} >
               <img src={muteImg} alt="add item" width="20%" />
-            </button>
+            </button> */}
         </div>
       </div>
 
@@ -57,89 +56,9 @@ export const Landing = () => {
               <h1 className='font-face-mm'>GONE TOO SOON MEMORIALIZE<br />YOUR DEAD NFTs</h1>
               </div>
                 {mintButton()}  
+                <h2 className='about-text'>Choose an NFT to mint with and send to graveyard to get REKT</h2>
               </div>
           </div>
-        </div>
-      </section>
-    )
-  }
-  const about = () => {
-    return (
-        Section("About",
-        null,
-        aboutRef, 
-          <p className="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        )
-    )
-  }
-
-  const howToMint = () => {
-    return (
-      <section id="Services" className="content-section text-center" ref={mintRef}>
-        <div className="container">
-          <div className="block-heading">
-            <h1 className='font-face-mm'>How to Mint</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div className="row ">
-            <div className="col-md-3 col-sm-6">
-              <div className="service-box">
-                <div className="service-icon yellow">
-                  <div className="front-content">
-                    <i className="fa fa-globe" aria-hidden="true"></i>
-                    <h3>Choose an NFT</h3>
-                  </div>
-                </div>
-                <div className="service-content">
-                  <h3>Choose an NFT</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="service-box">
-                <div className="service-icon orange">
-                  <div className="front-content">
-                    <i className="fa fa-suitcase"></i>
-                    <h3>Mint on Site</h3>
-                  </div>
-                </div>
-                <div className="service-content">
-                  <h3>Mint on Site</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="service-box ">
-                <div className="service-icon red">
-                  <div className="front-content">
-                    <i className="fa fa-male" aria-hidden="true"></i>
-                    <h3>View on Opensea</h3>
-                  </div>
-                </div>
-                <div className="service-content">
-                  <h3>View on Opensea</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="service-box">
-                <div className="service-icon grey">
-                  <div className="front-content">
-                    <i className="fa fa-users"></i>
-                    <h3>Community</h3>
-                  </div>
-                </div>
-                <div className="service-content">
-                  <h3>Community</h3>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {mintButton()}  
         </div>
       </section>
     )
@@ -147,116 +66,63 @@ export const Landing = () => {
   const roadmap = () => {
     return (
       Section("RoadMap",
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      "Coming Soon",
       roadmapRef,
-      <img src='spooky_background.JPG'></img>
-
+      <div></div>
       )
     )
   }
-  const leaderboard = () => {
+  const leaderboard2 = () => {
     return (
-      <section className="content-section text-center" id="Portfolio" ref={leaderRef}>
-        <div className="container">
-          <div className="block-heading">
-            <h1 className='font-face-mm'>Leaderboard</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div className="portfolio-wrapper clearfix">
-            <a className="each-portfolio" data-fancybox="gallery" href="images/p-two.jpeg">
-              <div className="content hover-cont-wrap">
-                <div className="content-overlay"></div>
-                <img className="content-image" src="assets/images/p-two.jpeg" />
-                <div className="content-details fadeIn-bottom">
-                  <h5 className="p-title">Title</h5>
-                  <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <span className="zoom"><i className="fa fa-search-plus"></i></span>
-                </div>
-              </div>
-            </a>
-            <a className="each-portfolio" data-fancybox="gallery" href="images/p-three.jpeg">
-              <div className="content hover-cont-wrap">
-                <div className="content-overlay"></div>
-                <img className="content-image" src="assets/images/p-three.jpeg" />
-                <div className="content-details fadeIn-bottom">
-                  <h5 className="p-title">Title</h5>
-                  <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <span className="zoom"><i className="fa fa-search-plus"></i></span>
-                </div>
-              </div>
-            </a>
-            <a className="each-portfolio" data-fancybox="gallery" href="images/p-four.jpeg">
-              <div className="content hover-cont-wrap">
-                <div className="content-overlay"></div>
-                <img className="content-image" src="assets/images/p-four.jpeg" />
-                <div className="content-details fadeIn-bottom">
-                  <h5 className="p-title">Title</h5>
-                  <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <span className="zoom"><i className="fa fa-search-plus"></i></span>
-                </div>
-              </div>
-            </a>
-            <a className="each-portfolio" data-fancybox="gallery" href="images/p-five.jpeg">
-              <div className="content hover-cont-wrap">
-                <div className="content-overlay"></div>
-                <img className="content-image" src="assets/images/p-five.jpeg" />
-                <div className="content-details fadeIn-bottom">
-                  <h5 className="p-title">Title</h5>
-                  <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <span className="zoom"><i className="fa fa-search-plus"></i></span>
-                </div>
-              </div>
-            </a>
-            <a className="each-portfolio" data-fancybox="gallery" href="images/p-six.jpeg">
-              <div className="content hover-cont-wrap">
-                <div className="content-overlay"></div>
-                <img className="content-image" src="assets/images/p-six.jpeg" />
-                <div className="content-details fadeIn-bottom">
-                  <h5 className="p-title">Title</h5>
-                  <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <span className="zoom"><i className="fa fa-search-plus"></i></span>
-                </div>
-              </div>
-            </a>
-            <a className="each-portfolio" data-fancybox="gallery" href="images/p-three.jpeg">
-              <div className="content hover-cont-wrap">
-                <div className="content-overlay"></div>
-                <img className="content-image" src="assets/images/p-three.jpeg" />
-                <div className="content-details fadeIn-bottom">
-                  <h5 className="p-title">Title</h5>
-                  <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <span className="zoom"><i className="fa fa-search-plus"></i></span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+      Section("Leaderboard",
+      "Most Minteed",
+      roadmapRef,
+      <Table striped bordered hover variant='dark'>
+        <thead color='white'>
+          <tr>
+            <th>#</th>
+            <th colSpan={2}>NFT</th>
+            <th>REKT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td colSpan={2}>Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td colSpan={2}>Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </Table>
+      )
     )
   }
+ 
   const footer = () => {
     return (
-      <footer className="footer text-center">
-        <div className="container">
+        <div className="text-center colorBackground">
           <ul className="social-icons">
             <li className='social-icon' >
               <a href='https://twitter.com/'>
-                <img height='60px' src='/twitter-logo.png' alt='Twitter'></img>
+                <img height='60px' src='/twitter_white.png' alt='Twitter'></img>
               </a>
             </li>
             <li className='social-icon' >
               <a href='https://twitter.com/'>
-                <img height='60px' src='/discord-logo.png' alt='Twitter'></img>
+                <img height='60px' src='/opensea_white.png' alt='Twitter'></img>
               </a>
             </li>
             <li className='social-icon' >
               <a href='https://twitter.com/'>
-                <img height='60px' src='/opensea-logo.png' alt='Twitter'></img>
+                <img height='60px' src='/etherscan_white.png' alt='Twitter'></img>
               </a>
             </li>
           </ul>
         </div>
-      </footer>
     )
   }
   const nav = () => {
@@ -264,7 +130,7 @@ export const Landing = () => {
       <Navbar collapseOnSelect expand="lg">
         <Navbar.Brand href="/">
           <Nav.Item>
-            <Nav.Link className='font-face-bt' onClick={() => scrollTo(leaderRef)}>REKT IIN PEACE</Nav.Link>
+            <Nav.Link className='nav-header' onClick={() => scrollTo(leaderRef)}>REKT IIN PEACE</Nav.Link>
           </Nav.Item>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -282,24 +148,21 @@ export const Landing = () => {
             <Nav.Item>
               <Nav.Link href='https://mint.rektinpeace.com' className='font-face-bt' onClick={() => scrollTo(mintRef)}>Mint</Nav.Link>
             </Nav.Item>
-            {/* <Nav.Item>
-              <Nav.Link className='font-face-bt' onClick={() => scrollTo(roadmapRef)} >Road Map</Nav.Link>
-            </Nav.Item> */}
-            {/* <Nav.Item>
+            <Nav.Item>
               <Nav.Link>
-                <img height='40px' src='/twitter-logo.png' alt='Twitter'></img>
+                <img height='30px' src='/twitter_black.png' alt='Twitter'></img>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <img height='40px' src='/discord-logo.png' alt='Twitter'></img>
+                <img height='30px' src='/opensea_black.png' alt='Twitter'></img>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <img height='40px' src='/opensea-logo.png' alt='Twitter'></img>
+                <img height='30px' src='/etherscan_black.png' alt='Twitter'></img>
               </Nav.Link>
-            </Nav.Item> */}
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -318,11 +181,11 @@ export const Landing = () => {
       {nav()}
       {video()}
       {mint()}
-      {about()}
-      {howToMint()}
+      {/* {howToMint()} */}
+      {leaderboard2()}
       {roadmap()}
-      {Leaderboard(leaderRef)}
-      {leaderboard()}
+      {/* {Leaderboard(leaderRef)}
+      {leaderboard()} */}
       {footer()}
     </div>
   )

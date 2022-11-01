@@ -12,12 +12,17 @@
   }
 
 #About {
-  background-color: #5576B9;
+  background-color: black;
   color: white;
 }
 
 #RoadMap {
-  background-color: #5576B9;
+  background-color: black;
+  color: white;
+}
+
+#Leaderboard {
+  background-color: black;
   color: white;
 }
 
@@ -288,7 +293,7 @@ footer.footer p.small a:hover, footer.footer p.small a.focus {
   }
 
 .colorBackground {
-    background-color: #5576B9;
+    background-color: black;
     color: white;
 }
 
@@ -347,6 +352,11 @@ body {
   padding: 6px;
 }
 
+.nav-header {
+  font-family: "Bloody-Terror";
+  margin-left: 10px;
+}
+
 
 .font-face-mm {
   font-family: "Melted-Monster";
@@ -354,6 +364,11 @@ body {
 
 .font-face-bt {
   font-family: "Bloody-Terror";
+}
+
+.about-text {
+  margin-top: 70px;
+  font-family: "Melted-Monster";
 }
 
 .grave-background {
@@ -395,7 +410,7 @@ body {
 }
 
 .back-image {
-  background: url('./spooky_background.JPG') no-repeat ;
+  background: url('./background_opacity.jpeg') no-repeat ;
   width: 100%;
   height: 630px;
   -webkit-background-size: cover;
