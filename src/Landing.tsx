@@ -4,6 +4,9 @@ import { render } from "react-dom"; import audio from '../public/audio.png'
 import no_audio from '../public/no_audio.png'
 import './fonts/Bloody-Terror.ttf'
 import './fonts/Melted-Monster.ttf'
+import {Section, Leaderboard} from './components'
+
+
 
 
 export const Landing = () => {
@@ -26,20 +29,7 @@ export const Landing = () => {
     }
   }
 
-  const main = () => {
-    return (
-      <section id="Banner" className="content-section">
-        <div className="container content-wrap text-center">
-          <h1>Rect In Peace</h1>
-          <h3>
-            <em>Where your NFTs are laid to rest</em>
-          </h3>
-          <a className="btn btn-primary btn-xxl smooth-scroll" href="https://mint.rektinpeace.com">Mint</a>
-        </div>
-        <div className="overlay"></div>
-      </section>
-    )
-  }
+
   const video = () => {
     const url: string = "https://storage.googleapis.com/rektinpeace.com/video.mp4"
     return (
@@ -50,29 +40,39 @@ export const Landing = () => {
         </video>      
         <div >
             <button className='mute-button' onClick={handleToggleMute} >
-              <img src={muteImg} alt="add item" width="20px" />
+              <img src={muteImg} alt="add item" width="20%" />
             </button>
         </div>
       </div>
 
     )
   }
-  const about = () => {
+  const mint = () => {
     return (
-      <section id="About" className="content-section" ref={aboutRef}>
+      <section id="About" className="content-section back-image" ref={aboutRef}>
         <div className="container text-center">
           <div className="row">
             <div className="col-lg-12">
               <div className="block-heading">
-                <h1 className='font-face-mm'>About</h1>
+              <h1 className='font-face-mm'>GONE TOO SOON MEMORIALIZE<br />YOUR DEAD NFTs</h1>
               </div>
-              <p className="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
+                {mintButton()}  
+              </div>
           </div>
         </div>
       </section>
     )
   }
+  const about = () => {
+    return (
+        Section("About",
+        null,
+        aboutRef, 
+          <p className="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        )
+    )
+  }
+
   const howToMint = () => {
     return (
       <section id="Services" className="content-section text-center" ref={mintRef}>
@@ -146,15 +146,12 @@ export const Landing = () => {
   }
   const roadmap = () => {
     return (
-      <section id="About" className="content-section text-center" ref={roadmapRef}>
-        <div className="container">
-          <div className="block-heading">
-            <h1 className='font-face-mm'>Road Map</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <img src='spooky_background.JPG'></img>
-        </div>
-      </section>
+      Section("RoadMap",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+      roadmapRef,
+      <img src='spooky_background.JPG'></img>
+
+      )
     )
   }
   const leaderboard = () => {
@@ -262,7 +259,6 @@ export const Landing = () => {
       </footer>
     )
   }
-
   const nav = () => {
     return (
       <Navbar collapseOnSelect expand="lg">
@@ -309,29 +305,11 @@ export const Landing = () => {
       </Navbar>
     )
   }
-
   const mintButton = () => {
     return (
       <a href="https://mint.rektinpeace.com/">
                 <button className="mint-button font-face-mm ">MINT</button>
               </a> 
-    )
-  }
-
-  const mint = () => {
-    return (
-      <section id="About" className="content-section back-image" ref={aboutRef}>
-        <div className="container text-center">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="block-heading">
-              <h1 className='font-face-mm'>GONE TOO SOON MEMORIALIZE<br />YOUR DEAD NFTs</h1>
-              </div>
-                {mintButton()}  
-              </div>
-          </div>
-        </div>
-      </section>
     )
   }
 
@@ -343,10 +321,24 @@ export const Landing = () => {
       {about()}
       {howToMint()}
       {roadmap()}
+      {Leaderboard(leaderRef)}
       {leaderboard()}
       {footer()}
-
     </div>
-
   )
 }
+
+// const main = () => {
+//   return (
+//     <section id="Banner" className="content-section">
+//       <div className="container content-wrap text-center">
+//         <h1>Rect In Peace</h1>
+//         <h3>
+//           <em>Where your NFTs are laid to rest</em>
+//         </h3>
+//         <a className="btn btn-primary btn-xxl smooth-scroll" href="https://mint.rektinpeace.com">Mint</a>
+//       </div>
+//       <div className="overlay"></div>
+//     </section>
+//   )
+// }

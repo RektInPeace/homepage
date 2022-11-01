@@ -16,164 +16,17 @@
   color: white;
 }
 
+#RoadMap {
+  background-color: #5576B9;
+  color: white;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   overflow-x: hidden;
 }
-.btn-xl {
-  padding: 20px 40px;
-}
-.content-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.content-section-heading h2 {
-  font-size: 48px;
-}
-.content-section-heading h3 {
-  font-size: 16px;
-  text-transform: uppercase;
-}
-h1,h2,h3,h4,h5,h6 {
-  font-weight: 700;
-}
-.block-heading {
-  margin-bottom: 40px;
-  text-align: center;
-}
-/* Side Menu */
-.logo {
-	position: absolute;
-	z-index: 99;
-	left: 50px;
-	top: 20px;
-}
-.logo i {
-	font-size: 50px;
-	color: #fff;
-}
-span {
-	color: #fff;
-	vertical-align: middle;
-	margin-left: 9px;
-	font-size: 24px;
-	font-family: 'Source Sans Pro', sans-serif;
-	text-transform: capitalize;
-}
-#sidebar-wrapper {
-  position: fixed;
-  z-index: 2;
-  right: 0;
-  width: 250px;
-  height: 100%;
-  -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-  transform: translateX(250px);
-  background: rgba(0, 0, 0, .7);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-}
-.sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-#sidebar-wrapper .sidebar-nav li.sidebar-nav-item a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  padding: 15px;
-}
-#sidebar-wrapper .sidebar-nav li a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-}
-#sidebar-wrapper .sidebar-nav li a:active, .sidebar-nav li a:focus {
-  text-decoration: none;
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-}
-#sidebar-wrapper .sidebar-nav>.sidebar-brand {
-  font-size: 20px;
-  height: 80px;
-  line-height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-}
-#sidebar-wrapper .sidebar-nav>.sidebar-brand a {
-  color: #fff;
-}
-#sidebar-wrapper .sidebar-nav>.sidebar-brand a:hover {
-  color: #fff;
-  background: none;
-}
-#sidebar-wrapper.active {
-  right: 250px;
-  width: 250px;
-  -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-  z-index: 99;
-}
-.menu-toggle {
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  color: #fff;
-  background: rgba(52, 58, 64, 0.5);
-  line-height: 50px;
-  z-index: 999;
-}
-.menu-toggle:focus, .menu-toggle:hover {
-  color: #fff;
-}
-.menu-toggle:hover {
-  background: #343a40;
-}
-#Banner {
-  position: relative;
-  height: 100vh;
-  background: linear-gradient(274deg, #46c8d0, #6262e2 44%, #c962f7);
-  color: #fff;
-}
-#Banner .content-wrap {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  left: 50%;
-}
-#Banner .content-wrap h1 {
-  font-size: 80px;
-  margin: 0 0 30px;
-  padding: 0;
-}
-#Banner .content-wrap h3 {
-  font-size: 24px;
-  margin: 0 0 30px;
-  padding: 0;
-}
-#Banner .btn-primary {
-  background-color: #02ccba;
-  color: #fff;
-  border: none;
-}
-#Banner .btn-primary:hover {
-	background-color: #07bcab;
-}
+
+
 #Services {
   background-color: #5576B9;
   color: white;
