@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.ccedef80.css",
-    "main.js": "/static/js/main.853d43a7.js",
+    "main.css": "/static/css/main.af94460c.css",
+    "main.js": "/static/js/main.62510fe9.js",
     "static/js/787.33dfb140.chunk.js": "/static/js/787.33dfb140.chunk.js",
+    "static/media/Bloody-Terror.ttf": "/static/media/Bloody-Terror.ee63e52fe0c0966d77bd.ttf",
+    "static/media/Melted-Monster.ttf": "/static/media/Melted-Monster.e388d1905f2d19aaa1a1.ttf",
+    "static/media/spooky_background.JPG": "/static/media/spooky_background.d21ae9ffcee363031484.JPG",
     "index.html": "/index.html",
-    "main.ccedef80.css.map": "/static/css/main.ccedef80.css.map",
-    "main.853d43a7.js.map": "/static/js/main.853d43a7.js.map",
+    "main.af94460c.css.map": "/static/css/main.af94460c.css.map",
+    "main.62510fe9.js.map": "/static/js/main.62510fe9.js.map",
     "787.33dfb140.chunk.js.map": "/static/js/787.33dfb140.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccedef80.css",
-    "static/js/main.853d43a7.js"
+    "static/css/main.af94460c.css",
+    "static/js/main.62510fe9.js"
   ]
 }
