@@ -1,6 +1,15 @@
 
 /* Styles Begins */
-
+@font-face {
+  font-family: "Bloody-Terror";
+  src: local("Bloody-Terror"),
+   url("./fonts/Bloody-Terror.ttf") format("truetype");
+  }
+@font-face {
+  font-family: "Melted-Monster";
+  src: local("Melted-Monster"),
+    url("./fonts/Melted-Monster.ttf") format("truetype");
+  }
 
 #About {
   background-color: #5576B9;
@@ -219,18 +228,19 @@ span {
   margin-bottom: 20px;
 }
 #Services .service-box .service-icon .front-content h3 {
-  font-size: 15px;
+  font-size: 32px;
   color: #fff;
   text-align: center;
   margin-bottom: 15px;
   text-transform: uppercase;
+  font-family: "Melted-Monster";
 }
 #Services .service-box .service-content h3 {
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 22px;
   color: #fff;
   margin-bottom: 10px;
   text-transform: uppercase;
+  font-family: "Melted-Monster";
 }
 #Services .service-box .service-content p {
   font-size: 13px;
@@ -471,6 +481,10 @@ body {
   color: white;
 } 
 
+.fullWidth {
+  width: 100%;
+}
+
 .social-icons {
   padding-right: 0px;
 }
@@ -478,4 +492,107 @@ body {
   display: inline;
   height: 30px;
   padding: 6px;
+}
+
+
+.font-face-mm {
+  font-family: "Melted-Monster";
+}
+
+.font-face-bt {
+  font-family: "Bloody-Terror";
+}
+
+.grave-background {
+  background-size:100% 100%;
+  background: url("./spooky_background.JPG");
+}
+
+.video-player {
+  position: relative;
+}
+
+.video-player-div {
+  position: absolute;
+
+}
+
+.bg-image {
+  position: relative;
+}
+.bg-image img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.bg-image video {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.bg-image h1 {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-top: 170px;
+  color: white;
+}
+
+.back-image {
+  background: url('./spooky_background.JPG') no-repeat ;
+  width: 100%;
+  height: 630px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.mute-button {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.nav, .main {
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.mint-button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  height:  70px;
+  border:  4px solid white;
+  display:  inline-block;
+  float:  none;
+  text-align:  center;
+  width:  220px;
+  padding:  0px!important;
+  font-size:  44px;
+  color: white;
+}
+
+.mint-button:hover  {
+   color:  blue;
+   background:  rgba(255, 255, 255, 0.2);
+   border:  2px solid blue;
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
 }

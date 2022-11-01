@@ -2,9 +2,8 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 import React, { Component, useRef, createRef, useState } from "react";
 import { render } from "react-dom"; import audio from '../public/audio.png'
 import no_audio from '../public/no_audio.png'
-
-
-
+import './fonts/Bloody-Terror.ttf'
+import './fonts/Melted-Monster.ttf'
 
 
 export const Landing = () => {
@@ -42,11 +41,20 @@ export const Landing = () => {
     )
   }
   const video = () => {
-    const url: string = "https://www.googleapis.com/drive/v3/files/125Mf3RHkWTJfP7fy5YkBh7ME6XWIeSSF?alt=media&key=AIzaSyAbJP_B4-X6mNasCDFS-3JrE4JoygtDDAI"
+    const url: string = "https://storage.googleapis.com/rektinpeace.com/video.mp4"
     return (
-      <video controlsList='nodownload' autoPlay={true} muted={muted} loop width="100%" height="100%">
-        <source src={url} type="video/mp4" />
-      </video>
+      <div className="bg-image">
+        <video className='video-player' controlsList='nodownload' autoPlay={true} muted={muted} loop width="100%" height="100%">
+          <source src={url} type="video/mp4" />
+          <img src='/logo_white.png'></img>
+        </video>      
+        <div >
+            <button className='mute-button' onClick={handleToggleMute} >
+              <img src={muteImg} alt="add item" width="20px" />
+            </button>
+        </div>
+      </div>
+
     )
   }
   const about = () => {
@@ -56,7 +64,7 @@ export const Landing = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="block-heading">
-                <h2>About</h2>
+                <h1 className='font-face-mm'>About</h1>
               </div>
               <p className="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
@@ -70,10 +78,10 @@ export const Landing = () => {
       <section id="Services" className="content-section text-center" ref={mintRef}>
         <div className="container">
           <div className="block-heading">
-            <h2>How to Mint</h2>
+            <h1 className='font-face-mm'>How to Mint</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
-          <div className="row">
+          <div className="row ">
             <div className="col-md-3 col-sm-6">
               <div className="service-box">
                 <div className="service-icon yellow">
@@ -131,7 +139,7 @@ export const Landing = () => {
               </div>
             </div>
           </div>
-          <Button href='https://mint.rektinpeace.com'>Mint</Button>
+          {mintButton()}  
         </div>
       </section>
     )
@@ -141,7 +149,7 @@ export const Landing = () => {
       <section id="About" className="content-section text-center" ref={roadmapRef}>
         <div className="container">
           <div className="block-heading">
-            <h2>Road Map</h2>
+            <h1 className='font-face-mm'>Road Map</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <img src='spooky_background.JPG'></img>
@@ -154,7 +162,7 @@ export const Landing = () => {
       <section className="content-section text-center" id="Portfolio" ref={leaderRef}>
         <div className="container">
           <div className="block-heading">
-            <h2>Leaderboard</h2>
+            <h1 className='font-face-mm'>Leaderboard</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div className="portfolio-wrapper clearfix">
@@ -259,30 +267,29 @@ export const Landing = () => {
     return (
       <Navbar collapseOnSelect expand="lg">
         <Navbar.Brand href="/">
-          <img src='/logo512.png' width="50px" alt="" />
-          &nbsp;
+          <Nav.Item>
+            <Nav.Link className='font-face-bt' onClick={() => scrollTo(leaderRef)}>REKT IIN PEACE</Nav.Link>
+          </Nav.Item>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="justify-content-center" style={{ flex: 1 }}>
-            <Nav.Item>
-              <Nav.Link onClick={() => scrollTo(aboutRef)}>About</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link onClick={() => scrollTo(mintRef)}>Minting</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link onClick={() => scrollTo(roadmapRef)} >Road Map</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link onClick={() => scrollTo(leaderRef)}>Leaderboard</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Button href='https://mint.rektinpeace.com'>MINT</Button>
-            </Nav.Item>
+
           </Nav>
           <Nav className="justify-content-right" >
             <Nav.Item>
+              <Nav.Link className='font-face-bt' onClick={() => scrollTo(leaderRef)}>Leaderboard</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link className='font-face-bt' onClick={() => scrollTo(aboutRef)}>About</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href='https://mint.rektinpeace.com' className='font-face-bt' onClick={() => scrollTo(mintRef)}>Mint</Nav.Link>
+            </Nav.Item>
+            {/* <Nav.Item>
+              <Nav.Link className='font-face-bt' onClick={() => scrollTo(roadmapRef)} >Road Map</Nav.Link>
+            </Nav.Item> */}
+            {/* <Nav.Item>
               <Nav.Link>
                 <img height='40px' src='/twitter-logo.png' alt='Twitter'></img>
               </Nav.Link>
@@ -296,29 +303,49 @@ export const Landing = () => {
               <Nav.Link>
                 <img height='40px' src='/opensea-logo.png' alt='Twitter'></img>
               </Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     )
   }
 
+  const mintButton = () => {
+    return (
+      <a href="https://mint.rektinpeace.com/">
+                <button className="mint-button font-face-mm ">MINT</button>
+              </a> 
+    )
+  }
+
+  const mint = () => {
+    return (
+      <section id="About" className="content-section back-image" ref={aboutRef}>
+        <div className="container text-center">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="block-heading">
+              <h1 className='font-face-mm'>GONE TOO SOON MEMORIALIZE<br />YOUR DEAD NFTs</h1>
+              </div>
+                {mintButton()}  
+              </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <div className='backgroundColor'>
-      <div className='geeks'>
-        {video()}
-        {about()}
-        {howToMint()}
-        {roadmap()}
-        {leaderboard()}
-        {footer()}
-      </div>
       {nav()}
-      <Navbar className='bottomPin'>
-        <Button onClick={handleToggleMute} size="lg" variant="clear">
-          <img src={muteImg} alt="add item" width="30" />
-        </Button>
-      </Navbar>
+      {video()}
+      {mint()}
+      {about()}
+      {howToMint()}
+      {roadmap()}
+      {leaderboard()}
+      {footer()}
+
     </div>
 
   )
