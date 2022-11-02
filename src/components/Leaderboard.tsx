@@ -126,3 +126,84 @@ export const Leaderboard = (ref: React.RefObject<HTMLElement>) => {
 //         )
 //     )
 //   }
+
+// const leaderboard = () => {
+//     return (
+//       <section className="content-section text-center" id="Portfolio" ref={leaderRef}>
+//         <div className="container">
+//           <div className="block-heading">
+//             <h1 className='font-face-mm'>Leaderboard</h1>
+//             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+//           </div>
+//           <div className="portfolio-wrapper clearfix">
+//             <a className="each-portfolio" data-fancybox="gallery" href="images/p-two.jpeg">
+//               <div className="content hover-cont-wrap">
+//                 <div className="content-overlay"></div>
+//                 <img className="content-image" src="assets/images/p-two.jpeg" />
+//                 <div className="content-details fadeIn-bottom">
+//                   <h5 className="p-title">Title</h5>
+//                   <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+//                   <span className="zoom"><i className="fa fa-search-plus"></i></span>
+//                 </div>
+//               </div>
+//             </a>
+//             <a className="each-portfolio" data-fancybox="gallery" href="images/p-three.jpeg">
+//               <div className="content hover-cont-wrap">
+//                 <div className="content-overlay"></div>
+//                 <img className="content-image" src="assets/images/p-three.jpeg" />
+//                 <div className="content-details fadeIn-bottom">
+//                   <h5 className="p-title">Title</h5>
+//                   <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+//                   <span className="zoom"><i className="fa fa-search-plus"></i></span>
+//                 </div>
+//               </div>
+//             </a>
+//             <a className="each-portfolio" data-fancybox="gallery" href="images/p-four.jpeg">
+//               <div className="content hover-cont-wrap">
+//                 <div className="content-overlay"></div>
+//                 <img className="content-image" src="assets/images/p-four.jpeg" />
+//                 <div className="content-details fadeIn-bottom">
+//                   <h5 className="p-title">Title</h5>
+//                   <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+//                   <span className="zoom"><i className="fa fa-search-plus"></i></span>
+//                 </div>
+//               </div>
+//             </a>
+//             <a className="each-portfolio" data-fancybox="gallery" href="images/p-five.jpeg">
+//               <div className="content hover-cont-wrap">
+//                 <div className="content-overlay"></div>
+//                 <img className="content-image" src="assets/images/p-five.jpeg" />
+//                 <div className="content-details fadeIn-bottom">
+//                   <h5 className="p-title">Title</h5>
+//                   <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+//                   <span className="zoom"><i className="fa fa-search-plus"></i></span>
+//                 </div>
+//               </div>
+//             </a>
+//             <a className="each-portfolio" data-fancybox="gallery" href="images/p-six.jpeg">
+//               <div className="content hover-cont-wrap">
+//                 <div className="content-overlay"></div>
+//                 <img className="content-image" src="assets/images/p-six.jpeg" />
+//                 <div className="content-details fadeIn-bottom">
+//                   <h5 className="p-title">Title</h5>
+//                   <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+//                   <span className="zoom"><i className="fa fa-search-plus"></i></span>
+//                 </div>
+//               </div>
+//             </a>
+//             <a className="each-portfolio" data-fancybox="gallery" href="images/p-three.jpeg">
+//               <div className="content hover-cont-wrap">
+//                 <div className="content-overlay"></div>
+//                 <img className="content-image" src="assets/images/p-three.jpeg" />
+//                 <div className="content-details fadeIn-bottom">
+//                   <h5 className="p-title">Title</h5>
+//                   <p className="p-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+//                   <span className="zoom"><i className="fa fa-search-plus"></i></span>
+//                 </div>
+//               </div>
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+//     )
+//   }
